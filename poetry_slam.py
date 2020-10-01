@@ -1,5 +1,7 @@
 import random
 
+# -----------------------------------------------
+# Prints out the poem file into the terminal as a list
 def get_file_lines(filename):
     infile = open(filename, "r")
     read_poem = infile.readlines()
@@ -8,6 +10,8 @@ def get_file_lines(filename):
 
 print(get_file_lines("Caged_Bird.txt"))
 
+# -----------------------------------------------
+# Prints out the lines of the poem backwards
 def lines_printed_backwards(lines_list):
     list_length = len(lines_list)
     lines_list = lines_list[::-1]
@@ -20,6 +24,8 @@ infile = open("Caged_Bird.txt", "r")
 print(lines_printed_backwards(infile.readlines()))
 infile.close()
 
+# -----------------------------------------------
+# Randomly prints out lines of the poem randomly
 def lines_printed_random(lines_list):
     for random_line in range(len(lines_list)):
         random_line = random.choice(lines_list)
@@ -29,6 +35,8 @@ infile = open("Caged_Bird.txt", "r")
 print(lines_printed_random(infile.readlines()))
 infile.close()
 
+# -----------------------------------------------
+# Adds smiley faces to the poem lines
 def lines_printed_smiley(lines_list):
     for i in range(len(lines_list)):
         smiley_line = ":)  " + lines_list[i] + "  (:"
